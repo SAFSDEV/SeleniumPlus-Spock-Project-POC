@@ -21,3 +21,9 @@ For example, initially it was intended to assume a spock/groovy class, but since
 is to just go run a JUnitCore test with that Class name, it can be ANY type of JUnit test.
 
 So, the command-line parameter will likely be changed in the near future to show this.
+
+In the POC project, there is TestCase1 setup as a Run Configuration with a command-line argument to use –script to run the Spock test.
+
+Without the command-line –script setting it is just a normal SeleniumPlus test.  With it, runTest() is bypassed in favor of the Junit test class 'com.sas.spock.tests.SpockExperiment'
+
+In the Project src, this is a .groovy file, but Groovy compiles it into the SpockExperiment class file.
