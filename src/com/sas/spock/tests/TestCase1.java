@@ -48,8 +48,13 @@ public class TestCase1 extends SeleniumPlus {
 	@Override
 	public void runTest() throws Throwable {
 
-		System.out.println("Normal runTest() execution.");
+		Logging.LogMessage("Normal runTest() execution.");
 		IndependantLog.info("Normal runTest() execution.");
+		
+		//TODO In SpockExperiment, we call SeleniumPlus API, then the TestRecord of keyword CallScript
+		//will be over wrote by the last SE+ execution in SpockExperiment.
+		//We need to find a way to fix this.
+		Misc.CallScript("com.sas.spock.tests.SpockExperiment");
 
 	}
 	
