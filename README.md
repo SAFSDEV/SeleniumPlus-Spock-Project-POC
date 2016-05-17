@@ -1,17 +1,22 @@
 # SeleniumPlus-Spock-Project-POC
-SeleniumPlus Project Example for Core groovy_spock_support_poc
+
+This Project is intended to be a temporary playground for the developers and other interested parties of the SAFS/SeleniumPlus Spock/Groovy integration project.  Because this Spock/Groovy integration project is relatively new, it is subject to spectacular breaking changes to an evolving API and implementation.
+
+The instructions for preparing an existing SeleniumPlus install are subject to change and can result in PlugIns being added, removed, or modified.  This is something normal SeleniumPlus users should NOT do to their normal "production" SeleniumPlus systems as it is entirely possible to "break" these Eclipse installations.
+
+The SeleniumPlus JARS associated with this Spock/Groovy integration project are NOT the production SeleniumPlus JARS from 'master'.  The SeleniumPlus system is modified with SAFSDEV/Core BRANCH 'groovy_spock_support_poc'.
 
 SeleniumPlus installation must be customized/modified as shown below:
 
-1. Eclipse PlugIn for Groovy must be installed: 
-   SeleniumPlus Eclipse is KEPLER.
-   Groovy Eclipse Plugin 2.9.1.xx with Groovy Runtime Plugin 2.3.7.xx for KEPLER
+1. Eclipse PlugIn for Groovy must be installed: <br>
+   SeleniumPlus Eclipse is KEPLER.<br>
+   Groovy Eclipse Plugin Groovy Runtime 2.4.3 for KEPLER<br>
+   http://dist.springsource.org/snapshot/GRECLIPSE/e4.3/<br>
 
-2. SeleniumPlus\libs needs:
-   groovy-2.3.11.jar
-   spock-core-1.0-groovy-2.3.jar
-   (optional/future) groovy-jsr223-2.3.11.jar
-   
+
+2. SeleniumPlus\libs needs:<br>
+   spock-core-1.0-groovy-2.4.jar
+
 There currently appear to be intermittent issues with the Project's Groovy and Selenium+ Natures butting heads.
 For example, sometimes the automatic code completion really wants to stick with Groovy assets and SeleniumPlus 
 assets have to be dutifully coerced into code completion.
