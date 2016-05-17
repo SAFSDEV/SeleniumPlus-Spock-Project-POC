@@ -11,7 +11,7 @@ SeleniumPlus installation must be customized/modified as shown below:
 1. Eclipse PlugIn for Groovy must be installed: <br>
    SeleniumPlus Eclipse is KEPLER.<br>
    Groovy Eclipse Plugin Groovy Runtime 2.4.3 for KEPLER<br>
-   http://dist.springsource.org/snapshot/GRECLIPSE/e4.3/<br>
+   Eclipse PlugIn Software Site: http link: dist.springsource.org/snapshot/GRECLIPSE/e4.3/<br>
 
 
 2. SeleniumPlus\libs needs:<br>
