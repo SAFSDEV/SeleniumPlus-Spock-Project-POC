@@ -56,6 +56,9 @@ public class TestCase1 extends SeleniumPlus {
 		//We need to find a way to fix this.
 		Misc.CallScript("com.sas.spock.tests.SpockExperiment");
 
+		//Test to run with general JUnit test
+		Misc.CallScript("com.sas.spock.tests.GeneralJUnitTest");
+		
 	}
 	
 	/** 
