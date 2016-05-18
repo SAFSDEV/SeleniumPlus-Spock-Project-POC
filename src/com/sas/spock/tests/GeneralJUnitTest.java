@@ -19,13 +19,19 @@ public class GeneralJUnitTest {
 	
 	@Test
 	public void selenium_Assert_pass() {
-		Assert.Equals(a, b);
+		boolean condition = Assert.Equals(a, b);
+		org.junit.Assert.assertTrue("The string '"+a+"' doesn't match string '"+b+"'", condition);
 	}
 	
+	/**
+	 * This test (SE+ Assert) will fail. It is used to prove that SE+ test could run within JUnit Test.<br>
+	 * It will only write failure message to SAFS Log. The normal JUnit test will NOT reflect this error.<br>
+	 * To get a consistent JUnit test report, we test the result returned by SE+ Assert by org.junit.Assert.<br>
+	 */
 	@Test
 	public void selenium_Assert_fail() {
-		//This test will fail
-		Assert.Equals(a, c);
+		boolean condition = Assert.Equals(a, c);
+		org.junit.Assert.assertTrue("The string '"+a+"' doesn't match string '"+c+"'", condition);
 	}
 	
 	/**
