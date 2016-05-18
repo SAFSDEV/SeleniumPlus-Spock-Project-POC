@@ -50,14 +50,15 @@ public class TestCase1 extends SeleniumPlus {
 
 		Logging.LogMessage("Normal runTest() execution.");
 		IndependantLog.info("Normal runTest() execution.");
-		
-		//TODO In SpockExperiment, we call SeleniumPlus API, then the TestRecord of keyword CallScript
-		//will be over wrote by the last SE+ execution in SpockExperiment.
-		//We need to find a way to fix this.
-		Misc.CallScript("com.sas.spock.tests.SpockExperiment");
 
+		//TODO Expose the Driver command "CallJUnit"
+//		Misc.CallJUnit("com.sas.spock.tests.SpockExperiment");
+		Runner.command("CallJUnit", "com.sas.spock.tests.SpockExperiment");
+
+		//TODO Expose the Driver command "CallJUnit"
 		//Test to run with general JUnit test
-		Misc.CallScript("com.sas.spock.tests.GeneralJUnitTest");
+//		Misc.CallJUnit("com.sas.spock.tests.GeneralJUnitTest");
+		Runner.command("CallJUnit", "com.sas.spock.tests.GeneralJUnitTest");
 		
 	}
 	
