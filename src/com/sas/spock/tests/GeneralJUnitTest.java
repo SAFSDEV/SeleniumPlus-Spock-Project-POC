@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.safs.SAFSException;
 import org.safs.model.tools.RuntimeDataAware;
 import org.safs.selenium.webdriver.SeleniumPlus;
+import org.safs.selenium.webdriver.SeleniumPlus.Logging;
 import org.safs.tools.RuntimeDataInterface;
 
 /**
@@ -73,6 +74,7 @@ public class GeneralJUnitTest implements RuntimeDataAware {
 	 */
 	@Test
 	public void selenium_Assert_fail() {
+		Logging.LogTestWarning("**Expected 1 Failure** below:");
 		boolean condition = SeleniumPlus.Assert.Equals(a, c);
 		Assert.assertTrue("The string '"+a+"' doesn't match string '"+c+"'", condition);
 	}
@@ -87,6 +89,7 @@ public class GeneralJUnitTest implements RuntimeDataAware {
 		try{
 			String sa = safsdata.getVariable("a");
 			String sc = safsdata.getVariable("c");
+			Logging.LogTestWarning("**Expected 1 Failure** below:");
 			boolean condition = SeleniumPlus.Assert.Equals(sa, sc);
 			Assert.assertTrue("SAFSVAR ^a '"+ sa +"' did not match SAFSVAR ^c '"+ sc +"'",condition);
 		}catch(SAFSException x){
